@@ -1,0 +1,15 @@
+current directory: /Users/thomasspencer/work/active/manifesto/vendor/gems/bindex-0.5.0/ext/bindex
+/Users/thomasspencer/.rvm/rubies/ruby-2.4.0/bin/ruby -r ./siteconf20180307-43896-mptuvm.rb extconf.rb
+creating Makefile
+
+current directory: /Users/thomasspencer/work/active/manifesto/vendor/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: /Users/thomasspencer/work/active/manifesto/vendor/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.bundle
+
+current directory: /Users/thomasspencer/work/active/manifesto/vendor/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 cruby.bundle ./.gem.20180307-43896-1pr48ag/bindex
