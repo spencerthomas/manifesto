@@ -1,10 +1,4 @@
-<p id="notice"><%= notice %></p>
-
-
-<div class="container">
-  <div class="row projects-array">
-
-<% @projects.each do |project| %>
+<%= @projects.each do |project| %>
     <div class="col-lg-4">
       <div class="card mb-3">
         <%= image_tag "meetup.jpg", class: "card-img-top" %>
@@ -24,11 +18,3 @@
 
 <% end %>
  
-
-
-
-  </div>
-
-  <%= link_to "Add New Project", new_project_path, class: "btn btn-outline-primary" %>  
-
-</div>

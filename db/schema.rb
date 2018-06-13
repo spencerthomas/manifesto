@@ -10,10 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180513114840) do
+ActiveRecord::Schema.define(version: 20180609132951) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "goals", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "goal_date"
+    t.boolean  "complete"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["user_id"], name: "index_goals_on_user_id", using: :btree
+  end
+
+  create_table "pillars", force: :cascade do |t|
+    t.string   "name"
+    t.string   "image"
+    t.integer  "time"
+    t.integer  "income"
+    t.text     "vision"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_pillars_on_user_id", using: :btree
+  end
 
   create_table "projects", force: :cascade do |t|
     t.string   "title"
@@ -54,6 +77,8 @@ ActiveRecord::Schema.define(version: 20180513114840) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "goals", "users"
+  add_foreign_key "pillars", "users"
   add_foreign_key "projects", "users"
   add_foreign_key "tasks", "users"
 end

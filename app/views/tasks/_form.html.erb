@@ -1,10 +1,13 @@
-<%= form_for(@task) do |f| %>
+<%= simple_form_for(@task) do |f| %>
 
-<%= f.text_field :name, placeholder: "to do"     %>
-<%= f.text_field :content,  placeholder: "the detail" %>
+<%= f.input :name, placeholder: "to do"     %>
+<%= f.input :content,  placeholder: "the detail" %>
 Completed?
 <%= f.check_box :completed, class: "fa fa-checkbox"  %>
 
-<%= f.button :submit %>
+<br>
+<br>
+
+<%= f.button :submit, class: "btn btn-primary btn-md" %>
 
 <% end %>

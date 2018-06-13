@@ -1,9 +1,11 @@
+<% @pillars.each do |pillar| %>
+
  <div class="col-md-6 col-sm-12 col-lg-4 pillar-column">
 		<div class="card bg-dark text-white">
 			<img> <%= image_tag "family.png", class: "card-img" %></img >
 		  <div class="card-img-overlay">
-		    <h5 class="card-title">Family</h5>
-		    <p class="card-text text-sm">Last updated 3 mins ago</p>
+		    <h5 class="card-title"><%= pillar.name %></h5>
+		    <p class="card-text text-sm">Last updated <%= time_ago_in_words(pillar.created_at) %> ago</p>
 			</div>
 		</div>
 
@@ -12,15 +14,15 @@
 
 			<div class="card">
          		<div class="card-body">
-    			Vision goes here
+    			<%= pillar.vision %>
   				</div>
 			</div>
 
 			<br>
 			
 			<div class="card">
-         		<div class="card-body text-center">
-    			  50%    |    $0 
+         		<div class="card-body">
+    			  <%= pillar.time %>%   |   $<%= pillar.income %>
   				</div>
 			</div>
 
@@ -40,7 +42,7 @@
 
     			</div>
 			</div>
-  		</div>
+  			</div>
 		
 
 			<br>
@@ -142,6 +144,6 @@
 
 
 			</div>
-</div>
+  </div>
 
-
+ <% end %>

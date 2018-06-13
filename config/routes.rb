@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :goals
+  resources :pillars
   resources :projects
   resources :testprojects
   devise_for :users

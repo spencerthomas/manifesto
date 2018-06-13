@@ -1,17 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  description: MyString
-  link: MyString
+  name: MyString
   image: MyString
-  active: false
+  time: 1
+  income: 1
+  vision: MyText
   user: one
 
 two:
-  title: MyString
-  description: MyString
-  link: MyString
+  name: MyString
   image: MyString
-  active: false
+  time: 1
+  income: 1
+  vision: MyText
   user: two

@@ -5,5 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :tasks
   has_many :projects
-  has_many :testprojects
+  has_many :pillars
+  has_many :goals, through: :pillars
 end
